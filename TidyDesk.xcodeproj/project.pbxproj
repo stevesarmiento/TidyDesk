@@ -15,6 +15,10 @@
 		F3B339792B79E23100745789 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B339782B79E23100745789 /* CustomTabView.swift */; };
 		F3E0822D2B7AA75C00C0D88A /* DragAndDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0822C2B7AA75C00C0D88A /* DragAndDropView.swift */; };
 		F3E082302B7AB5C100C0D88A /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = F3E0822F2B7AB5C100C0D88A /* ZIPFoundation */; };
+		F3E082322B7AC0F500C0D88A /* FloatingDragAndDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E082312B7AC0F500C0D88A /* FloatingDragAndDropView.swift */; };
+		F3E082342B7AC11A00C0D88A /* MinimalMenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E082332B7AC11A00C0D88A /* MinimalMenuBarView.swift */; };
+		F3E082362B7AC3C100C0D88A /* CustomWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E082352B7AC3C100C0D88A /* CustomWindow.swift */; };
+		F3E082382B7AD01800C0D88A /* AnimationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E082372B7AD01800C0D88A /* AnimationUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		F3B339762B79DE5500745789 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		F3B339782B79E23100745789 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		F3E0822C2B7AA75C00C0D88A /* DragAndDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropView.swift; sourceTree = "<group>"; };
+		F3E082312B7AC0F500C0D88A /* FloatingDragAndDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingDragAndDropView.swift; sourceTree = "<group>"; };
+		F3E082332B7AC11A00C0D88A /* MinimalMenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalMenuBarView.swift; sourceTree = "<group>"; };
+		F3E082352B7AC3C100C0D88A /* CustomWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWindow.swift; sourceTree = "<group>"; };
+		F3E082372B7AD01800C0D88A /* AnimationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 		F3B339642B79DD1B00745789 /* TidyDesk */ = {
 			isa = PBXGroup;
 			children = (
+				F3E082392B7AD3A200C0D88A /* Utilities */,
 				F3B339752B79DE4400745789 /* View */,
 				F3B339742B79DE3D00745789 /* Model */,
 				F3B339652B79DD1B00745789 /* TidyDeskApp.swift */,
@@ -91,9 +100,20 @@
 			isa = PBXGroup;
 			children = (
 				F3B339782B79E23100745789 /* CustomTabView.swift */,
+				F3E082332B7AC11A00C0D88A /* MinimalMenuBarView.swift */,
 				F3E0822C2B7AA75C00C0D88A /* DragAndDropView.swift */,
+				F3E082312B7AC0F500C0D88A /* FloatingDragAndDropView.swift */,
+				F3E082352B7AC3C100C0D88A /* CustomWindow.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F3E082392B7AD3A200C0D88A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F3E082372B7AD01800C0D88A /* AnimationUtility.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,11 +192,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E082362B7AC3C100C0D88A /* CustomWindow.swift in Sources */,
 				F3E0822D2B7AA75C00C0D88A /* DragAndDropView.swift in Sources */,
+				F3E082382B7AD01800C0D88A /* AnimationUtility.swift in Sources */,
 				F3B339772B79DE5500745789 /* Tab.swift in Sources */,
 				F3B339682B79DD1B00745789 /* ContentView.swift in Sources */,
 				F3B339662B79DD1B00745789 /* TidyDeskApp.swift in Sources */,
 				F3B339792B79E23100745789 /* CustomTabView.swift in Sources */,
+				F3E082342B7AC11A00C0D88A /* MinimalMenuBarView.swift in Sources */,
+				F3E082322B7AC0F500C0D88A /* FloatingDragAndDropView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
