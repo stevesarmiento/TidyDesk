@@ -57,7 +57,9 @@ struct DragAndDropView: View {
             
             DispatchQueue.main.async {
                 let savePanel = NSSavePanel()
-                savePanel.allowedFileTypes = ["zip"]
+                savePanel.allowedContentTypes = [UTType.zip]
+                //savePanel.allowedContentTypes = [.archive]
+                // savePanel.allowedContentTypes = [UTType(exportedAs: "public.zip-archive")]
                 savePanel.nameFieldStringValue = "CompressedFiles.zip"
                 print("Attempting to present save panel...")
                 savePanel.begin { response in

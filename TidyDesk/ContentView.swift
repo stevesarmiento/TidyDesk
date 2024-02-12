@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var currentTab: Tab = .today
+    @State private var currentTab: Tab = .clean
     @Environment(\.colorScheme) private var scheme
     @State private var isDark: Bool = true
     @State private var hoverTab: Tab?
@@ -48,7 +48,7 @@ struct ContentView: View {
                 // }
                 CustomTabView(selection: $currentTab) {
                     ForEach(Tab.allCases, id: \.rawValue) { tab in
-                        if tab == .today {
+                        if tab == .clean {
                             DragAndDropView()
                                 .tag(tab)
                         } else {
@@ -79,7 +79,7 @@ struct ContentView: View {
                     .background(.blue.gradient, in: .circle)
                 
                 if isLarge {
-                    Text("Mail")
+                    Text("TidyDesk")
                         .fontWeight(.medium)
                 }
             }

@@ -10,7 +10,7 @@ import SwiftUI
 ///Tabs
 
 enum Tab: String, CaseIterable {
-    case today = "Today"
+    case clean = "Organize"
     // case inbox = "Inbox"
     // case draft = "Draft"
     // case sent = "Sent"
@@ -20,8 +20,8 @@ enum Tab: String, CaseIterable {
     
     var sfSymbol: String {
         switch self {
-        case .today:
-            return "calendar"
+        case .clean:
+            return "folder.fill.badge.plus"
         // case .inbox:
         //     return "tray"
         // case .draft:
