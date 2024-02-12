@@ -13,5 +13,6 @@ struct TidyDeskApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowStyle(.hiddenTitleBar)
     }
 }

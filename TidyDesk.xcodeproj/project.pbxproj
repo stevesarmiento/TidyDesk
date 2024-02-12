@@ -11,6 +11,8 @@
 		F3B339682B79DD1B00745789 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B339672B79DD1B00745789 /* ContentView.swift */; };
 		F3B3396A2B79DD1C00745789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B339692B79DD1C00745789 /* Assets.xcassets */; };
 		F3B3396D2B79DD1C00745789 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B3396C2B79DD1C00745789 /* Preview Assets.xcassets */; };
+		F3B339772B79DE5500745789 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B339762B79DE5500745789 /* Tab.swift */; };
+		F3B339792B79E23100745789 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B339782B79E23100745789 /* CustomTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		F3B339692B79DD1C00745789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B3396C2B79DD1C00745789 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F3B3396E2B79DD1C00745789 /* TidyDesk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TidyDesk.entitlements; sourceTree = "<group>"; };
+		F3B339762B79DE5500745789 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		F3B339782B79E23100745789 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 		F3B339642B79DD1B00745789 /* TidyDesk */ = {
 			isa = PBXGroup;
 			children = (
+				F3B339752B79DE4400745789 /* View */,
+				F3B339742B79DE3D00745789 /* Model */,
 				F3B339652B79DD1B00745789 /* TidyDeskApp.swift */,
 				F3B339672B79DD1B00745789 /* ContentView.swift */,
 				F3B339692B79DD1C00745789 /* Assets.xcassets */,
@@ -67,6 +73,22 @@
 				F3B3396C2B79DD1C00745789 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F3B339742B79DE3D00745789 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3B339762B79DE5500745789 /* Tab.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3B339752B79DE4400745789 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3B339782B79E23100745789 /* CustomTabView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B339772B79DE5500745789 /* Tab.swift in Sources */,
 				F3B339682B79DD1B00745789 /* ContentView.swift in Sources */,
 				F3B339662B79DD1B00745789 /* TidyDeskApp.swift in Sources */,
+				F3B339792B79E23100745789 /* CustomTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
