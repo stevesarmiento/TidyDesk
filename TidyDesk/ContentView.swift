@@ -40,10 +40,21 @@ struct ContentView: View {
                     onApeared = true
                 }
 
+                // CustomTabView(selection: $currentTab) {
+                //     ForEach(Tab.allCases, id: \.rawValue) { tab in
+                //         Text(tab.rawValue + "Views")
+                //             .tag(tab)
+                //     }
+                // }
                 CustomTabView(selection: $currentTab) {
                     ForEach(Tab.allCases, id: \.rawValue) { tab in
-                        Text(tab.rawValue + "Views")
-                            .tag(tab)
+                        if tab == .today {
+                            DragAndDropView()
+                                .tag(tab)
+                        } else {
+                            Text(tab.rawValue + "Views")
+                                .tag(tab)
+                        }
                     }
                 }
             }

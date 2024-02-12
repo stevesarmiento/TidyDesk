@@ -13,6 +13,8 @@
 		F3B3396D2B79DD1C00745789 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B3396C2B79DD1C00745789 /* Preview Assets.xcassets */; };
 		F3B339772B79DE5500745789 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B339762B79DE5500745789 /* Tab.swift */; };
 		F3B339792B79E23100745789 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B339782B79E23100745789 /* CustomTabView.swift */; };
+		F3E0822D2B7AA75C00C0D88A /* DragAndDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0822C2B7AA75C00C0D88A /* DragAndDropView.swift */; };
+		F3E082302B7AB5C100C0D88A /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = F3E0822F2B7AB5C100C0D88A /* ZIPFoundation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		F3B3396E2B79DD1C00745789 /* TidyDesk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TidyDesk.entitlements; sourceTree = "<group>"; };
 		F3B339762B79DE5500745789 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		F3B339782B79E23100745789 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		F3E0822C2B7AA75C00C0D88A /* DragAndDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E082302B7AB5C100C0D88A /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				F3B339782B79E23100745789 /* CustomTabView.swift */,
+				F3E0822C2B7AA75C00C0D88A /* DragAndDropView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +112,9 @@
 			dependencies = (
 			);
 			name = TidyDesk;
+			packageProductDependencies = (
+				F3E0822F2B7AB5C100C0D88A /* ZIPFoundation */,
+			);
 			productName = TidyDesk;
 			productReference = F3B339622B79DD1B00745789 /* TidyDesk.app */;
 			productType = "com.apple.product-type.application";
@@ -135,6 +143,9 @@
 				Base,
 			);
 			mainGroup = F3B339592B79DD1B00745789;
+			packageReferences = (
+				F3E0822E2B7AB5C100C0D88A /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
 			productRefGroup = F3B339632B79DD1B00745789 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E0822D2B7AA75C00C0D88A /* DragAndDropView.swift in Sources */,
 				F3B339772B79DE5500745789 /* Tab.swift in Sources */,
 				F3B339682B79DD1B00745789 /* ContentView.swift in Sources */,
 				F3B339662B79DD1B00745789 /* TidyDeskApp.swift in Sources */,
@@ -365,6 +377,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3E0822E2B7AB5C100C0D88A /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.18;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3E0822F2B7AB5C100C0D88A /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3E0822E2B7AB5C100C0D88A /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3B3395A2B79DD1B00745789 /* Project object */;
 }
