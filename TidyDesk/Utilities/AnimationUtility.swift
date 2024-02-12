@@ -20,8 +20,8 @@ extension View {
     func wiggle() -> some View {
         self.modifier(Wiggle())
     }
-    func slideUp() -> some View {
-        self.modifier(SlideUp())
+    func slideDown() -> some View {
+        self.modifier(SlideDown())
     }
     func slideLeft() -> some View {
         self.modifier(SlideLeft())
@@ -82,18 +82,18 @@ struct FadeInEffect: ViewModifier {
     }
 }
 
-struct SlideUp: ViewModifier {
-    @State private var slideUpAnimation = false
+struct SlideDown: ViewModifier {
+    @State private var slideDownAnimation = false
     @State private var isShowing = false
 
     func body(content: Content) -> some View {
         content
-            .offset(y: slideUpAnimation ? 0 : 10)
+            .offset(y: slideDownAnimation ? 0 : -20)
             .opacity(isShowing ? 1 : 0)
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    withAnimation(.easeOut(duration: 0.1)) {
-                        self.slideUpAnimation = true
+                    withAnimation(.easeOut(duration: 0.15)) {
+                        self.slideDownAnimation = true
                         isShowing = true
 
                     }

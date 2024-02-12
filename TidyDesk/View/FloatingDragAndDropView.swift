@@ -10,12 +10,10 @@ import SwiftUI
 struct FloatingDragAndDropView: View {
     var body: some View {
         VStack{
-        DragAndDropView() // Your existing DragAndDropView code here
-            .frame(width: 300, height: 300)
+        DragAndDropView()
+            
         MinimalMenuBarView()
+            .slideDown()
         }
-
-
-           
     }
 }

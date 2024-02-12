@@ -23,37 +23,49 @@ struct DragAndDropView: View {
                     RoundedRectangle(cornerRadius: 13)
                         .fill(
                             LinearGradient(
-                                gradient: Gradient(colors: [Color.white.opacity(0.1), Color.white.opacity(0.1)]),
+                                gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0.3)]),
                                 startPoint: .top,
                                 endPoint: .bottom
                             )
                         )
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                            .strokeBorder(LinearGradient(gradient: Gradient(colors: [.white.opacity(0.1), .white.opacity(0.2)]), startPoint: .leading, endPoint: .trailing), lineWidth: 1)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(
+                            LinearGradient(gradient: Gradient(colors: [.white.opacity(0.2), .white.opacity(0.2)]), startPoint: .leading, endPoint: .trailing),
+                            style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round, dash: [10, 5])
                         )
-                        .shadow(radius: 10)
+                )
+                .shadow(radius: 10)
                     
                 )
 
             }
             .frame(width: 600, height: 300)
             .background(
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(
-                        LinearGradient(
-                            gradient: Gradient(colors: [Color.white.opacity(0.1), Color.white.opacity(0.1)]),
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                    )
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                        .strokeBorder(LinearGradient(gradient: Gradient(colors: [.white.opacity(0.1), .white.opacity(0.2)]), startPoint: .leading, endPoint: .trailing), lineWidth: 1)
-                    )
-                    .shadow(radius: 10)
+                BlurView(material: .sidebar, blendingMode: .withinWindow)
                 
             )
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.white.opacity(0.15), lineWidth: 1)
+            )
+            // .background(
+            //     RoundedRectangle(cornerRadius: 16)
+            //         .fill(
+            //             LinearGradient(
+            //                 gradient: Gradient(colors: [Color.white.opacity(0.1), Color.white.opacity(0.1)]),
+            //                 startPoint: .top,
+            //                 endPoint: .bottom
+            //             )
+            //         )
+            //         .overlay(
+            //             RoundedRectangle(cornerRadius: 16)
+            //             .strokeBorder(LinearGradient(gradient: Gradient(colors: [.white.opacity(0.1), .white.opacity(0.2)]), startPoint: .leading, endPoint: .trailing), lineWidth: 1)
+            //         )
+            //         .shadow(radius: 10)
+                
+            // )
             .onDrop(of: [.fileURL], isTargeted: nil) { providers -> Bool in
                     var urls = [URL]()
                     for provider in providers {
@@ -182,6 +194,3 @@ struct DragAndDropView: View {
     }
 
 }
-
-
-

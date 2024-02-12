@@ -19,6 +19,7 @@
 		F3E082342B7AC11A00C0D88A /* MinimalMenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E082332B7AC11A00C0D88A /* MinimalMenuBarView.swift */; };
 		F3E082362B7AC3C100C0D88A /* CustomWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E082352B7AC3C100C0D88A /* CustomWindow.swift */; };
 		F3E082382B7AD01800C0D88A /* AnimationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E082372B7AD01800C0D88A /* AnimationUtility.swift */; };
+		F3E0823D2B7AD53000C0D88A /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0823C2B7AD53000C0D88A /* BlurView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		F3E082332B7AC11A00C0D88A /* MinimalMenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalMenuBarView.swift; sourceTree = "<group>"; };
 		F3E082352B7AC3C100C0D88A /* CustomWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWindow.swift; sourceTree = "<group>"; };
 		F3E082372B7AD01800C0D88A /* AnimationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUtility.swift; sourceTree = "<group>"; };
+		F3E0823C2B7AD53000C0D88A /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				F3E082372B7AD01800C0D88A /* AnimationUtility.swift */,
+				F3E0823C2B7AD53000C0D88A /* BlurView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				F3B339682B79DD1B00745789 /* ContentView.swift in Sources */,
 				F3B339662B79DD1B00745789 /* TidyDeskApp.swift in Sources */,
 				F3B339792B79E23100745789 /* CustomTabView.swift in Sources */,
+				F3E0823D2B7AD53000C0D88A /* BlurView.swift in Sources */,
 				F3E082342B7AC11A00C0D88A /* MinimalMenuBarView.swift in Sources */,
 				F3E082322B7AC0F500C0D88A /* FloatingDragAndDropView.swift in Sources */,
 			);
