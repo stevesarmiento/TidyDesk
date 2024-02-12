@@ -51,8 +51,8 @@ struct DragAndDropView: View {
                 }
                 
                 let destinationURL = destinationFolder.appendingPathComponent(url.lastPathComponent)
-                try fileManager.copyItem(at: url, to: destinationURL)
-                print("Copied \(url) to \(destinationURL)")
+                try fileManager.moveItem(at: url, to: destinationURL)
+                print("Moved \(url) to \(destinationURL)")
             }
             
             DispatchQueue.main.async {
