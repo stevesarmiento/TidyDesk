@@ -18,7 +18,7 @@ struct DragAndDropView: View {
                     Image(systemName: "tray.and.arrow.down.fill")
                         .font(.system(size: 80))
                         .foregroundColor(.gray.opacity(0.5))
-                    Text("Drag files here")
+                    //Text("Drag files here")
                 }
                 .blur(radius: showSettings ? 5.0 : 0.0)
                 .frame(width: 580, height: 280)

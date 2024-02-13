@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         let contentView = FloatingDragAndDropView()
 
-        window = CustomWindow(contentRect: NSRect(x: 0, y: 0, width: 605, height: 605), styleMask: [.borderless], backing: .buffered, defer: false)
+        window = CustomWindow(contentRect: NSRect(x: 0, y: 0, width: 605, height: 600), styleMask: [.borderless], backing: .buffered, defer: false)
         window.center()
         window.setIsVisible(true)
         window.contentView = NSHostingView(rootView: contentView)
