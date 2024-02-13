@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct FloatingDragAndDropView: View {
+    @State private var showSettings = false // Add this line
+
     var body: some View {
         VStack{
-        DragAndDropView()
-            
-        MinimalMenuBarView()
-            .slideDown()
+            DragAndDropView(showSettings: $showSettings)
+                
+            MinimalMenuBarView(showSettings: $showSettings)
+                .slideDown()
         }
     }
 }

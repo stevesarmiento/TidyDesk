@@ -46,17 +46,17 @@ struct ContentView: View {
                 //             .tag(tab)
                 //     }
                 // }
-                CustomTabView(selection: $currentTab) {
-                    ForEach(Tab.allCases, id: \.rawValue) { tab in
-                        if tab == .clean {
-                            DragAndDropView()
-                                .tag(tab)
-                        } else {
-                            Text(tab.rawValue + "Views")
-                                .tag(tab)
-                        }
-                    }
-                }
+//                CustomTabView(selection: $currentTab) {
+//                    ForEach(Tab.allCases, id: \.rawValue) { tab in
+//                        if tab == .clean {
+//                            DragAndDropView(showSettings: $showSettings)
+//                                .tag(tab)
+//                        } else {
+//                            Text(tab.rawValue + "Views")
+//                                .tag(tab)
+//                        }
+//                    }
+//                }
             }
             .frame(width: size.width, height: size.height, alignment: .leading)
         }

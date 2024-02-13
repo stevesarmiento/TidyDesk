@@ -10,6 +10,8 @@ import UniformTypeIdentifiers
 import ZIPFoundation
 
 struct DragAndDropView: View {
+    @Binding var showSettings: Bool
+
     var body: some View {
             ZStack {
                 VStack {
@@ -18,6 +20,7 @@ struct DragAndDropView: View {
                         .foregroundColor(.gray.opacity(0.5))
                     Text("Drag files here")
                 }
+                .blur(radius: showSettings ? 5.0 : 0.0)
                 .frame(width: 580, height: 280)
                 .background(
                     RoundedRectangle(cornerRadius: 13)
@@ -38,12 +41,20 @@ struct DragAndDropView: View {
                 .shadow(radius: 10)
                     
                 )
+                if showSettings {
+                    SettingsView()
+                        .frame(width: 580, height: 300) 
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                        .animation(.snappy(duration: 0.28), value: showSettings)
+                        .zIndex(1)                
+                    }
+
 
             }
             .frame(width: 600, height: 300)
             .background(
                 BlurView(material: .sidebar, blendingMode: .withinWindow)
-                
             )
             .clipShape(RoundedRectangle(cornerRadius: 20))
             .overlay(
@@ -82,7 +93,7 @@ struct DragAndDropView: View {
                     
                     return true
                 }
-    }
+        }
     func handleDroppedFiles(urls: [URL]) {
     print("Handling URLs: \(urls)")
 
